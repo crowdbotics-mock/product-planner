@@ -1,4 +1,4 @@
-# porjectbotics
+# Project Planner
 
 ### Herramienta que permita al cliente explicar, de forma amable y sencilla:
 
