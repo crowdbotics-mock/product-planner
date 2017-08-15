@@ -1,0 +1,32 @@
+{
+    "name": "product-planner",
+    "version": "1.0.0",
+    "description": "Web application that helps users to generate the development plan for de product they want to build",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/crowdbotics-mock/product-planner.git"
+    },
+    "author": "crowdbotics-hackaton\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[h",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/crowdbotics-mock/product-planner/issues"
+    },
+    "engines": {
+        "node": "6.9.5"
+    },
+    "homepage": "https://github.com/crowdbotics-mock/product-planner#readme",
+    "dependencies": {
+        "express": "^4.15.4",
+        "materialize-css": "^0.100.1"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-sass": "^3.1.0"
+    }
+
+}

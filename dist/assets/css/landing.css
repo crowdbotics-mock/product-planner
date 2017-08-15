@@ -1,0 +1,19 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+body nav {
+  padding: 0 1rem;
+}
+
+body nav .brand-logo {
+  font-family: 'Merriweather', serif;
+}
+
+body h4.tasks {
+  margin-left: 2vw;
+}
+
+.margin {
+  margin-bottom: -7px;
+}
