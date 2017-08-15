@@ -13,16 +13,31 @@ firebase.initializeApp(config);
 const cargarPagina = function(){
     $('.collapsible').collapsible();
     $('.modal').modal();
-    $("#correcto1s").submit(siguiente);
-    $("#correcto2s").submit(siguiente);
-    $("#correcto3s").submit(siguiente);
+    $("#categoria").change(confirmacion);
+    $("#check1").click(seccion2);
+    $("#seccion1").submit(siguiente);
+    $("#seccion2").submit(siguiente);
+    $("#seccion3").submit(siguiente);
 
     
  };
 
 
+const confirmacion = function(){
+	console.log("cambió");
+	$("#correcto1").removeClass("hide");
+};
+
+const seccion2 = function(){
+	console.log("sig de 1 a 2");
+	$("#correcto1s").removeClass("hide");
+};
+
 const siguiente = function(e){
 	e.preventDefault();
+	console.log("enter");
+	$("#inicio").addClass("hide");
+	$("#user-persona").removeClass("hide");
 };
  //Section1: Tipo de Prooducto
 
