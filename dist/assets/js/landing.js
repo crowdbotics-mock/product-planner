@@ -9,10 +9,19 @@ var config = {
 };
 firebase.initializeApp(config);
 
-
-
- $(document).ready(function(){
+ 
+const cargarPagina = function(){
     $('.collapsible').collapsible();
     $('.modal').modal();
- });
+    $("#correcto1s").submit(siguiente);
 
+    
+ };
+
+
+const siguiente = function(e){
+	e.preventDefault();
+};
+ //Section1: Tipo de Prooducto
+
+ $(document).ready(cargarPagina);
