@@ -14,6 +14,7 @@ const cargarPagina = function(){
     $('.collapsible').collapsible();
     $('.modal').modal();
     $("#correcto1s").submit(siguiente);
+    $("#correcto2s").submit(siguiente);
     $("#correcto3s").submit(siguiente);
 
     
