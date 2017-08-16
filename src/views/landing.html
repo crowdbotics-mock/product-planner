@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Planner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="../static/materialize-css/dist/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/timeline.css">
     <link rel="stylesheet" href="../assets/css/landing.css">
 </head>
 
 <body>
     <header class="navbar-fixed">
-        <nav class="nav-wrapper amber darken-2">
+        <nav class="nav-wrapper amber darken-2 valign-wrapper">
             <a class="brand-logo left">Crowdbotics</a>
             <a class="right">PRODUCT PLANNER</a>
         </nav>
@@ -22,18 +24,21 @@
         <section id="inicio">
             <!--Dian-->
             <div class="row">
+                <h3 class="amber-text text-darken-2">Producto</h3>
+            </div>
+            <div class="row">
                 <form id="seccion1">
                     <div class="row">
                         <div class="col s12 m4">
                             <div class="descripcion">
-                                <h4>Danos una descripción de tu producto</h4>
+                                <h5>Danos una descripción de tu proyecto</h5>
                                 <div class="input-field col s12">
                                     <textarea id="textarea1" class="materialize-textarea"></textarea>
                                     <label for="textarea1">Textarea</label>
                                 </div>
                             </div>
                             <div id="tecnologias">
-                                <h4>Que tipo de producto necesitas</h4>
+                                <h5>Que tipo de producto necesitas</h5>
                                 <div class="row">
                                     <div class="col s6 m4 center">
                                         <img class="responsive-img" src="../assets/img/apple.svg" alt="ios">
@@ -75,7 +80,7 @@
                         </div>
                         <div class="col s12 m8">
                             <div id="categoria">
-                                <h4>¿Tu producto entra dentro de alguna de estas categorias?</h4>
+                                <h5>¿Tu producto entra dentro de alguna de estas categorias?</h5>
                                 <p>Puedes seleccionar varias</p>
 
                                 <div class="row">
@@ -252,11 +257,7 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -269,8 +270,9 @@
                 </form>
             </div>
         </section>
+        
+        <!--Pari  -->
         <section id="user-persona" class="hide">
-            <!--Pari-->
             <div class="container">
                 <h4>Usuarios</h4>
                 <h6>Ayúdanos a definir quién(es) usará(n) tu producto. Procura ser lo más específico posible.</h6>
@@ -383,9 +385,8 @@
         <section id="referencias">
 
         </section>
-        <section id="timeline">
-
-        </section>
+            
+        
     </main>
 
     <script src="../static/jquery/dist/jquery.min.js"></script>
