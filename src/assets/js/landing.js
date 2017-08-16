@@ -13,7 +13,7 @@ const contador = 4;
 let tipos = [];
 let categorias = [];
 const users = new Object();
-const usuarios = [];
+const database = firebase.database();
 
 const cargarPagina = function () {
     $('.collapsible').collapsible();
@@ -106,19 +106,19 @@ const siguiente2_3 = function (e) {
             <h5 class="amber-text text-darken-4">Acciones sugeridas</h5>
             <div id="acciones-basicas">
                 <div class="chip blue darken-3 white-text accion">
-                    Acción1
+                    Log-in
                     <i class="close material-icons">close</i>
                 </div>
                 <div class="chip blue darken-3 white-text accion">
-                    Acción2
+                    Perfil
                     <i class="close material-icons">close</i>
                 </div>
                 <div class="chip blue darken-3 white-text accion">
-                    Acción3
+                    Mensajes
                     <i class="close material-icons">close</i>
                 </div>
                 <div class="chip blue darken-3 white-text accion accion-sugerida">
-                    Acción4
+                    Publicaciones
                     <i class="close material-icons">close</i>
                 </div>
             </div>
@@ -136,14 +136,18 @@ const siguiente2_3 = function (e) {
         </div>
     </div>`;
 
+    database.ref('/static/social').on('value', function (snapshot) {
+        const social = snapshot.val();
+        console.log(social);
+    });
     for (var i = numeroUsuarios - 1; i >= 0; i--) {
-    	let newUser = "user"+i;
-    	let nuevaPlantilla = plantillaAcciones.replace('__user__', users[newUser]);
+        let newUser = "user" + i;
+        let nuevaPlantilla = plantillaAcciones.replace('__user__', users[newUser]);
         $("#usuario-acciones").append(nuevaPlantilla);
     }
 
     $("#acciones").removeClass("hide");
-    
+
 };
 
 const siguiente3_4 = function (e) {
@@ -178,8 +182,8 @@ const masUsuario = function () {
 }
 const userArray = function () {
     $(".valid").each(function (index, user) {
-        let newUser = "user"+index;
-             users[newUser] = this.value;
+        let newUser = "user" + index;
+        users[newUser] = this.value;
     });
     return $(".valid").length;
 }
