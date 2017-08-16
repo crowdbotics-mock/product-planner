@@ -15,12 +15,25 @@ body {
     #seccion3 {
         min-height: 100vh;
     }
-    .card-image{
-        padding: 1rem;
-        .btn-floating.halfway-fab{
-            top: -10px;
-            right: -10px;
+    #seccion1 {
+        #tecnologias {
+            img {
+                margin-top: 2rem;
+            }
+        }
+        #categoria {
+            padding-left: 2rem;
+            .tarjeta{
+                padding: 0 1vw;
+                .card-image {
+                padding: 1rem;
+                .btn-floating.halfway-fab {
+                    top: -10px;
+                    right: -10px;
+                }
+            }
+            }
+            
         }
     }
 }
-
