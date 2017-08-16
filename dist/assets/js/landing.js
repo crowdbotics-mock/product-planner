@@ -82,8 +82,36 @@ const siguiente2_3 = function (e) {
     console.log("enter");
     $("#user-persona").addClass("hide");
     scrollTo(0, 0);
-    $("#acciones").removeClass("hide");
     userArray();
+
+    const plantillaAcciones = `<div class="usuarios col m4">
+                        <p>__user__</p>
+                    </div>
+                    <div class="user-action col m4"> 
+                        <h5 class="center-align">Acciones sugeridas</h5>
+                        <div>
+                            <p>básicos</p>
+                        </div>
+                    </div>
+                    <div class="col m4">
+                    <div>
+                        <h5 class="center-align">Acciones particulares</h5>
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <!-- <div class="row">
+                            <button id="nueva-accion1" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
+                        </div> -->
+                    </div>
+                </div>`;
+    usuarios.forEach(function (usuario) {
+    	let nuevaPlantilla = plantillaAcciones.replace('__user__', usuario);
+        $("#usuario-acciones").append(nuevaPlantilla);
+    });
+
+
+    $("#acciones").removeClass("hide");
+    
 };
 
 const siguiente3_4 = function (e) {
