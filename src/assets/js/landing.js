@@ -12,6 +12,7 @@ firebase.initializeApp(config);
 const contador = 4;
 let tipos = [];
 let categorias = [];
+const usuarios = [];
 
 const cargarPagina = function () {
     $('.collapsible').collapsible();
@@ -29,70 +30,70 @@ const cargarPagina = function () {
 
 
 const Proyectos = {
-	proyectos:[]	
+    proyectos: []
 };
 
 
-const confirmacion = function(){
-	console.log("cambió");
-	$("#correcto1").removeClass("hide");
+const confirmacion = function () {
+    console.log("cambió");
+    $("#correcto1").removeClass("hide");
 };
 
-const confirmacion2 = function(){
-	console.log("cambió");
-	$("#correcto2").removeClass("hide");
+const confirmacion2 = function () {
+    console.log("cambió");
+    $("#correcto2").removeClass("hide");
 };
 
-const seccion2 = function(){
-	console.log("sig de 1 a 2");
-	$("#correcto1s").removeClass("hide");
+const seccion2 = function () {
+    console.log("sig de 1 a 2");
+    $("#correcto1s").removeClass("hide");
 };
 
-const seccion3 = function(){
-	console.log("sig de 2 a 3");
-	$("#correcto2s").removeClass("hide");
+const seccion3 = function () {
+    console.log("sig de 2 a 3");
+    $("#correcto2s").removeClass("hide");
 };
 
-const tipo_producto = function(){}
+const tipo_producto = function () {}
 
 
-const siguiente1_2 = function(e){
-	e.preventDefault();
-	localStorage.descripcion = $("#textarea1").val();
-	tipos = $(".tipo").map(function(indice, tipo){
-		if(tipo.checked){
-			console.log(tipo.id);
-			return tipo.id;
-		}
-	});
-	categorias = $(".categorias").map(function(indice, categoria){
-		if(categoria.checked){
-			console.log(categoria.id);
-			return categoria.id;
-		}
-	});
-	$("#inicio").addClass("hide");
-	scrollTo(0,0);
-	$("#user-persona").removeClass("hide");
+const siguiente1_2 = function (e) {
+    e.preventDefault();
+    localStorage.descripcion = $("#textarea1").val();
+    tipos = $(".tipo").map(function (indice, tipo) {
+        if (tipo.checked) {
+            console.log(tipo.id);
+            return tipo.id;
+        }
+    });
+    categorias = $(".categorias").map(function (indice, categoria) {
+        if (categoria.checked) {
+            console.log(categoria.id);
+            return categoria.id;
+        }
+    });
+    $("#inicio").addClass("hide");
+    scrollTo(0, 0);
+    $("#user-persona").removeClass("hide");
 };
 
-const siguiente2_3 = function(e){
-	e.preventDefault();
-	console.log("enter");
-	$("#user-persona").addClass("hide");
-	scrollTo(0,0);
-	$("#acciones").removeClass("hide");
+const siguiente2_3 = function (e) {
+    e.preventDefault();
+    console.log("enter");
+    $("#user-persona").addClass("hide");
+    scrollTo(0, 0);
+    $("#acciones").removeClass("hide");
     userArray();
 };
 
-const siguiente3_4 = function(e){
-	e.preventDefault();
-	console.log("enter");
-	$("#acciones").addClass("hide");
-	scrollTo(0,0);
-	$("#objetos").removeClass("hide");
+const siguiente3_4 = function (e) {
+    e.preventDefault();
+    console.log("enter");
+    $("#acciones").addClass("hide");
+    scrollTo(0, 0);
+    $("#objetos").removeClass("hide");
 };
- 
+
 const masUsuario = function () {
     let contadorUsuario = contador;
     const plantillaUsuario = `<div class="row">
@@ -102,26 +103,26 @@ const masUsuario = function () {
                                 <label for="un-__contador__">Nombre de usuario (rol):</label>
                             </div>
                             <div class="input-field col s6">
-                                <i class="material-icons prefix">details</i>
+                                <i class="material-icons prefix">list</i>
                                 <input id="ue__contador__" type="text" class="">
                                 <label for="ue__contador__">Especificaciones(edad, sexo):</label>
                             </div>
                         </div>`;
-    for (let i = contadorUsuario; i < (contadorUsuario+3); i++) {
+    for (let i = contadorUsuario; i < (contadorUsuario + 3); i++) {
         let nuevaPlantilla = plantillaUsuario.replace('__contador__', i)
             .replace('__contador__', i)
             .replace('__contador__', i)
             .replace('__contador__', i);
-        $("#userPersona").append(nuevaPlantilla); 
-    }       
-}
-const userArray = function (){
-        $(".user").filter(function(){
-            if($(".user").val() != null){
-               this.forEach(console.log($(".user").val())) 
-            } 
-
-        })
+        $("#userPersona").append(nuevaPlantilla);
     }
+}
+const userArray = function () {
+    $(".valid").each(function () {
+        usuarios.push(this.value);
+        console.log(usuarios);
+        }
+
+    )
+}
 
 $(document).ready(cargarPagina);
