@@ -117,8 +117,8 @@ const masUsuario = function () {
 }
 const userArray = function (){
     if ($(".user").val()!= null){
-        $(".user").map(function(usurio, i){
-            console.log(usurio)
+        $(".user").map(function(usuario, i){
+            console.log(usuario)
         })
     }
 }
