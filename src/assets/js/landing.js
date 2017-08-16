@@ -22,6 +22,7 @@ const cargarPagina = function () {
     $("#ue1").mouseup(confirmacion2);
     $("#check1").click(seccion2);
     $("#check2").click(seccion3);
+    $("#check3").click(seccion4);
     $("#seccion1").submit(siguiente1_2);
     $("#seccion2").submit(siguiente2_3);
     $("#seccion3").submit(siguiente3_4);
@@ -55,6 +56,11 @@ const seccion3 = function () {
     $("#correcto2s").removeClass("hide");
 };
 
+const seccion4 = function () {
+    console.log("sig de 3 a 4");
+    $("#correcto3s").removeClass("hide");
+};
+
 const tipo_producto = function () {}
 
 
@@ -83,33 +89,58 @@ const siguiente2_3 = function (e) {
     console.log("enter");
     $("#user-persona").addClass("hide");
     scrollTo(0, 0);
-    userArray();
+    const numeroUsuarios = userArray();
+    console.log(numeroUsuarios);
 
-   /* const plantillaAcciones = `<div class="usuarios col m4">
-                        <p>__user__</p>
-                    </div>
-                    <div class="user-action col m4"> 
-                        <h5 class="center-align">Acciones sugeridas</h5>
-                        <div>
-                            <p>básicos</p>
-                        </div>
-                    </div>
-                    <div class="col m4">
-                    <div>
-                        <h5 class="center-align">Acciones particulares</h5>
-                        <input type="text">
-                        <input type="text">
-                        <input type="text">
-                        <!-- <div class="row">
-                            <button id="nueva-accion1" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
-                        </div> -->
-                    </div>
-                </div>`;
-    usuarios.forEach(function (usuario) {
-    	let nuevaPlantilla = plantillaAcciones.replace('__user__', usuario);
+    const plantillaAcciones = `<div class="row">
+        <div class="col s4">
+            <div class="usuarios">
+                <h5 class="amber-text text-darken-4">Usuario</h5>
+                <div class="col s4 center-align">
+                    <img class="responsive-img circle" src="../assets/img/user_female.png" alt="userx">
+                    <h6>__user__</h6>
+                </div>
+            </div>
+        </div>
+        <div class="user-action col s4">
+            <h5 class="amber-text text-darken-4">Acciones sugeridas</h5>
+            <div id="acciones-basicas">
+                <div class="chip blue darken-3 white-text accion">
+                    Acción1
+                    <i class="close material-icons">close</i>
+                </div>
+                <div class="chip blue darken-3 white-text accion">
+                    Acción2
+                    <i class="close material-icons">close</i>
+                </div>
+                <div class="chip blue darken-3 white-text accion">
+                    Acción3
+                    <i class="close material-icons">close</i>
+                </div>
+                <div class="chip blue darken-3 white-text accion accion-sugerida">
+                    Acción4
+                    <i class="close material-icons">close</i>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <h5 class="amber-text text-darken-4">Acciones particulares</h5>
+            <div>
+                <input class="accion" type="text" placeholder="Ingresa una acción" />
+                <input class="accion" type="text" placeholder="Ingresa una acción" />
+                <input class="accion" type="text" placeholder="Ingresa una acción" />
+                <!-- <div class="row">
+                <button id="nueva-accion1" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
+            </div> -->
+            </div>
+        </div>
+    </div>`;
+
+    for (var i = numeroUsuarios - 1; i >= 0; i--) {
+    	let newUser = "user"+i;
+    	let nuevaPlantilla = plantillaAcciones.replace('__user__', users[newUser]);
         $("#usuario-acciones").append(nuevaPlantilla);
-    });
-*/
+    }
 
     $("#acciones").removeClass("hide");
     
@@ -148,9 +179,9 @@ const masUsuario = function () {
 const userArray = function () {
     $(".valid").each(function (index, user) {
         let newUser = "user"+index;
-             users[newUser] = this.value
-        }
-    )
+             users[newUser] = this.value;
+    });
+    return $(".valid").length;
 }
 
 $(document).ready(cargarPagina);
