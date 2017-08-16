@@ -44,5 +44,10 @@ body {
     .tarjeta-ej {
         padding-bottom: 6rem;
     }
+    #objetos {
+        ul.collection li.collection-item {
+            line-height: 2.3rem;
+            padding-bottom: 1rem;
+        }
+    }
 }
-

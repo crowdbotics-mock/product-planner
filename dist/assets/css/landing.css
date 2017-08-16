@@ -52,3 +52,8 @@ body #seccion1 #categoria .tarjeta .row.otro {
 body .tarjeta-ej {
   padding-bottom: 6rem;
 }
+
+body #objetos ul.collection li.collection-item {
+  line-height: 2.3rem;
+  padding-bottom: 1rem;
+}
