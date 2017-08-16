@@ -22,18 +22,22 @@
         <section id="inicio">
             <!--Dian-->
             <div class="row">
+                <h3 class="amber-text text-darken-2">Producto</h3>
+                <h5>Este primer paso servirá para que puedas explicarnos el tipo de proyecto que deseas.</h5>
+            </div>
+            <div class="row">
                 <form id="seccion1">
                     <div class="row">
                         <div class="col s12 m4">
                             <div class="descripcion">
-                                <h4>Danos una descripción de tu producto</h4>
+                                <h5>Danos una descripción de tu proyecto</h5>
                                 <div class="input-field col s12">
                                     <textarea id="textarea1" class="materialize-textarea"></textarea>
                                     <label for="textarea1">Textarea</label>
                                 </div>
                             </div>
                             <div id="tecnologias">
-                                <h4>Que tipo de producto necesitas</h4>
+                                <h5>Que tipo de producto necesitas</h5>
                                 <div class="row">
                                     <div class="col s6 m4 center">
                                         <img class="responsive-img" src="../assets/img/apple.svg" alt="ios">
@@ -75,7 +79,7 @@
                         </div>
                         <div class="col s12 m8">
                             <div id="categoria">
-                                <h4>¿Tu producto entra dentro de alguna de estas categorias?</h4>
+                                <h5>¿Tu producto entra dentro de alguna de estas categorias?</h5>
                                 <p>Puedes seleccionar varias</p>
 
                                 <div class="row">
@@ -240,23 +244,32 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="tarjeta col s12 m6">
                                         <div class="card">
-                                            <div class="card-panel"><br><br>
-                                                <div>
-                                                    <input class="with-gap" name="group2" type="checkbox" id="otro" />
-                                                    <label for="otro">Otro</label>
-                                                    <input type="text">
+                                            <div class="card-image">
+                                                <img class="responsive-img" src="../assets/img/08-others.svg">
+                                            </div>
+                                            <div class="card-content otro">
+                                                <div class="row valign-wrapper">
+                                                    <div class="col s6 m-cero">
+                                                        <span class="card-title">Otro</span>
+                                                    </div>
+                                                    <div class="col s6 m-cero">
+                                                        <p class="right-align">
+                                                            <input class="with-gap categorias" name="group2" type="checkbox" id="otro" />
+                                                            <label for="otro"></label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row otro">
+                                                    <p class="col s12">
+                                                        <input type="text" placeholder="Escríbelo aquí">
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -269,11 +282,12 @@
                 </form>
             </div>
         </section>
+
+        <!--Pari  -->
         <section id="user-persona" class="hide">
-            <!--Pari-->
             <div class="container">
-                <h4>Usuarios</h4>
-                <h6>Ayúdanos a definir quién(es) usará(n) tu producto. Procura ser lo más específico posible.</h6>
+                <h3 class="amber-text text-darken-2">Usuarios</h3>
+                <h5>Ayúdanos a definir quién(es) usará(n) tu producto. Procura ser lo más específico posible.</h5>
                 <!-- Tarjeta ejemplo -->
                 <div class="row">
                     <div class="col s12 m12">
@@ -342,76 +356,143 @@
         <section id="acciones" class="hide">
             <!--Gaby & Rena-->
             <div class="row">
-                <h2 class="center-align">Acciones</h2>
-                <p>//Agregar descripción//</p>
-                <form id="seccion3">
+                <h3 class="amber-text text-darken-2">Acciones</h3>
+                <h5>Selecciona las acciones que tu usuario podrá realizar durante el flujo de la aplicación</h5>
+            </div>
+            <div class="row">
+                <form id="seccion3 col s12">
                     <div id="usuario-acciones">
-                        <div class="usuarios col m4">
-                            <p>Usuario</p>
-                        </div>
-                        <div class="user-action col m4"> 
-                            <h5 class="center-align">Acciones sugeridas</h5>
-                            <div>
-                                <p>básicos</p>
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="usuarios">
+                                    <h5 class="amber-text text-darken-4">Usuario</h5>
+                                    <div class="col s4 center-align">
+                                        <img class="responsive-img circle" src="../assets/img/user_female.png" alt="userx">
+                                        <h6>UsuarioX</h6>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col m4">
-                            <div>
-                                <h5 class="center-align">Acciones particulares</h5>
-                                <input type="text">
-                                <input type="text">
-                                <input type="text">
-                                <!-- <div class="row">
+                            <div class="user-action col s4">
+                                <h5 class="amber-text text-darken-4">Acciones sugeridas</h5>
+                                <div id="acciones-basicas">
+                                    <div class="chip blue darken-3 white-text">
+                                        Acción1
+                                        <i class="close material-icons">close</i>
+                                    </div>
+                                    <div class="chip blue darken-3 white-text">
+                                        Acción2
+                                        <i class="close material-icons">close</i>
+                                    </div>
+                                    <div class="chip blue darken-3 white-text">
+                                        Acción3
+                                        <i class="close material-icons">close</i>
+                                    </div>
+                                    <div class="chip blue darken-3 white-text">
+                                        Acción4
+                                        <i class="close material-icons">close</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <h5 class="amber-text text-darken-4">Acciones particulares</h5>
+                                <div>
+                                    <input type="text" placeholder="Ingresa una acción" />
+                                    <input type="text" placeholder="Ingresa una acción" />
+                                    <input type="text" placeholder="Ingresa una acción" />
+                                    <!-- <div class="row">
                                     <button id="nueva-accion1" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
                                 </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="correcto3" class="hide">
+                    <div id="correcto3" class="col s12 m6 offset-m3 hide">
                         <input class="with-gap" name="group2" type="checkbox" id="check3" />
                         <label for="check3">Los datos son correctos</label>
                     </div>
-                    <button id="correcto3s" class="hide" type="submit">Siguiente</button>
+                    <button id="correcto3s" class="waves-effect waves-light btn blue darken-3 hide" type="submit"><i class="material-icons right">arrow_forward</i> Siguiente</button>
                 </form>
             </div>
-
         </section>
+
         <section id="objetos" class="hide">
             <div class="row">
-                <h2 class="center-align">Objetos</h2>
-                <p>//Agregar descripción//</p>
-                <form id="seccion4">
-                    <div class="usuarios col m4">
-                        <p>Usuario1</p>
-                    </div>
-                    <div class="col m8">
-                        <div class="user-action row"> 
-                            <div class="col m6">
-                                <h5 class="center-align">Acciones</h5>
-                                <p>Accion#1</p>
-                            </div>
-                            <div class="col m6">
-                                <h5 class="center-align">Datos</h5>
-                                <input type="text">
+                <h3 class="amber-text text-darken-2">Objetos</h3>
+                <h5>En éste apartado nos ayudarás a saber qué datos deseas obtener del usuario durante su recorrido por la aplicación.</h5>
+            </div>
+            <div class="row">
+                <form id="seccion4 col s12">
+                    <div class="row">
+                        <div class="usuarios col s4">
+                            <h5 class="amber-text text-darken-4">Usuario</h5>
+                            <div class="col s4 center-align">
+                                <img class="responsive-img circle" src="../assets/img/user_female.png" alt="userx">
+                                <h6>UsuarioX</h6>
                             </div>
                         </div>
+                        <div class="col m8">
+                            <div class="user-action row">
+                                <div class="col m6">
+                                    <h5 class="amber-text text-darken-4">Acciones</h5>
+                                    <p>Accion#1</p>
+                                </div>
+                                <div class="col m6">
+                                    <h5 class="amber-text text-darken-4">Datos</h5>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="correcto4" class="col s12 m6 offset-m3 hide">
+                            <input class="with-gap" name="group2" type="checkbox" id="check3" />
+                            <label for="check3">Los datos son correctos</label>
+                        </div>
+                        <button id="correcto4s" class="waves-effect waves-light btn blue darken-3 hide" type="submit"><i class="material-icons right">arrow_forward</i> Siguiente</button>
                     </div>
-                    
-                    
-                    <!-- <div id="correcto3" class="hide">
-                        <input class="with-gap" name="group2" type="checkbox" id="check3" />
-                        <label for="check3">Los datos son correctos</label>
-                    </div>
-                    <button id="correcto3s" class="hide" type="submit">Siguiente</button> -->
                 </form>
             </div>
         </section>
-        <section id="referencias">
-
+        <section id="referencias" class="hide">
+             <!-- Pari URL -->
+             <h3 class="amber-text text-darken-2">Nombre del producto</h3>
+             <h5>Ahora es momento de elegir el nombre de tu aplicación, también podrás darnos algunos ejemplos de sitios o aplicaciones similares a lo que requieres.</h5>
+            <div class="row">
+                <div class="col s6">
+                    <h5 class="amber-text text-darken-4">Nombre de la aplicación</h5>
+                </div>
+               <div class="col s6">
+                    <h5 class="amber-text text-darken-4">URL's de referencia</h5>
+                </div>
+             </div>
+                <form>
+                    <div class="row">
+                        <div class="col s6">
+                            <div class="input-field">
+                                 <input id="nombreApp" type="text" class="validate user">
+                                 <label for="nombreApp">Nombre</label>
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input id="url1" type="text">
+                                <label for="url1">URL</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="url2" type="text">
+                                <label for="url2">URL</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="url3" type="text">
+                                <label for="url3">URL</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="correcto5s" class="hide" type="submit">Siguiente</button>
+                </form>
+        <!-- Pari URL -->
         </section>
-        <section id="timeline">
 
-        </section>
     </main>
 
     <script src="../static/jquery/dist/jquery.min.js"></script>
