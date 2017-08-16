@@ -22,6 +22,7 @@ const cargarPagina = function () {
     $("#ue1").mouseup(confirmacion2);
     $("#check1").click(seccion2);
     $("#check2").click(seccion3);
+    $("#check3").click(seccion4);
     $("#seccion1").submit(siguiente1_2);
     $("#seccion2").submit(siguiente2_3);
     $("#seccion3").submit(siguiente3_4);
@@ -53,6 +54,11 @@ const seccion2 = function () {
 const seccion3 = function () {
     console.log("sig de 2 a 3");
     $("#correcto2s").removeClass("hide");
+};
+
+const seccion4 = function () {
+    console.log("sig de 3 a 4");
+    $("#correcto3s").removeClass("hide");
 };
 
 const tipo_producto = function () {}
@@ -99,19 +105,19 @@ const siguiente2_3 = function (e) {
         <div class="user-action col s4">
             <h5 class="amber-text text-darken-4">Acciones sugeridas</h5>
             <div id="acciones-basicas">
-                <div class="chip blue darken-3 white-text">
+                <div class="chip blue darken-3 white-text accion">
                     Acción1
                     <i class="close material-icons">close</i>
                 </div>
-                <div class="chip blue darken-3 white-text">
+                <div class="chip blue darken-3 white-text accion">
                     Acción2
                     <i class="close material-icons">close</i>
                 </div>
-                <div class="chip blue darken-3 white-text">
+                <div class="chip blue darken-3 white-text accion">
                     Acción3
                     <i class="close material-icons">close</i>
                 </div>
-                <div class="chip blue darken-3 white-text">
+                <div class="chip blue darken-3 white-text accion accion-sugerida">
                     Acción4
                     <i class="close material-icons">close</i>
                 </div>
@@ -120,9 +126,9 @@ const siguiente2_3 = function (e) {
         <div class="col s4">
             <h5 class="amber-text text-darken-4">Acciones particulares</h5>
             <div>
-                <input type="text" placeholder="Ingresa una acción" />
-                <input type="text" placeholder="Ingresa una acción" />
-                <input type="text" placeholder="Ingresa una acción" />
+                <input class="accion" type="text" placeholder="Ingresa una acción" />
+                <input class="accion" type="text" placeholder="Ingresa una acción" />
+                <input class="accion" type="text" placeholder="Ingresa una acción" />
                 <!-- <div class="row">
                 <button id="nueva-accion1" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
             </div> -->
