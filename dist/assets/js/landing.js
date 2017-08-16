@@ -10,6 +10,7 @@ var config = {
 firebase.initializeApp(config);
 
 const contador = 4;
+let tipos = [];
 
 const cargarPagina = function () {
     $('.collapsible').collapsible();
@@ -57,12 +58,12 @@ const tipo_producto = function(){}
 const siguiente1_2 = function(e){
 	e.preventDefault();
 	localStorage.descripcion = $("#textarea1").val();
-	localStorage.tipos = document.getElementByClassName('tipo').map(function (tipo){
+	tipos = $(".tipo").map(function(indice, tipo){
 		if(tipo.checked){
-			return tipo;
+			console.log(tipo.id);
+			return tipo.id;
 		}
 	});
-	console.log("localStorage.tipos");
 	$("#inicio").addClass("hide");
 	$("#user-persona").removeClass("hide");
 };
