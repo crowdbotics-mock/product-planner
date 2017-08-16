@@ -12,6 +12,7 @@ firebase.initializeApp(config);
 const contador = 4;
 let tipos = [];
 let categorias = [];
+const users = new Object();
 const usuarios = [];
 
 const cargarPagina = function () {
@@ -84,7 +85,7 @@ const siguiente2_3 = function (e) {
     scrollTo(0, 0);
     userArray();
 
-    const plantillaAcciones = `<div class="usuarios col m4">
+   /* const plantillaAcciones = `<div class="usuarios col m4">
                         <p>__user__</p>
                     </div>
                     <div class="user-action col m4"> 
@@ -108,7 +109,7 @@ const siguiente2_3 = function (e) {
     	let nuevaPlantilla = plantillaAcciones.replace('__user__', usuario);
         $("#usuario-acciones").append(nuevaPlantilla);
     });
-
+*/
 
     $("#acciones").removeClass("hide");
     
@@ -145,11 +146,10 @@ const masUsuario = function () {
     }
 }
 const userArray = function () {
-    $(".valid").each(function () {
-        usuarios.push(this.value);
-        console.log(usuarios);
+    $(".valid").each(function (index, user) {
+        let newUser = "user"+index;
+             users[newUser] = this.value
         }
-
     )
 }
 
