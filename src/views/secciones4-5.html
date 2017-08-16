@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Planner</title>
+    <link rel="stylesheet" href="../static/materialize-css/dist/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/landing.css">
+</head>
+
+<body>
+    <header class="navbar-fixed">
+        <nav class="nav-wrapper amber darken-2">
+            <a class="brand-logo left">Crowdbotics</a>
+            <a class="right">PRODUCT PLANNER</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section id="objetos" class="hide">
+            <div class="row">
+                <h3 class="amber-text text-darken-2">Objetos</h3>
+                <h5>En éste apartado nos ayudarás a saber qué datos deseas obtener del usuario durante su recorrido por la aplicación.</h5>
+            </div>
+            <div class="row">
+                <form id="seccion4 col s12">
+                    <div class="row">
+                        <div class="usuarios col s4">
+                            <h5 class="amber-text text-darken-4">Usuario</h5>
+                            <div class="col s4 center-align">
+                                <img class="responsive-img circle" src="../assets/img/user_female.png" alt="userx">
+                                <h6>UsuarioX</h6>
+                            </div>
+                        </div>
+                        <div class="user-action col s8">
+                            <div class="row">
+                                <div class="col s6">
+                                    <h5 class="amber-text text-darken-4">Acciones</h5>
+                                    <ul class="collection">
+                                        <li class="collection-item">Acción 1</li>
+                                        <li class="collection-item">Acción 2</li>
+                                        <li class="collection-item">Acción 3</li>
+                                        <li class="collection-item">Acción 4</li>
+                                    </ul>
+                                </div>
+                                <div class="col s6">
+                                    <h5 class="amber-text text-darken-4">Datos</h5>
+                                    <div>
+                                        <input type="text" placeholder="Data que obtendré">
+                                        <input type="text" placeholder="Data que obtendré">
+                                        <input type="text" placeholder="Data que obtendré">
+                                        <input type="text" placeholder="Data que obtendré">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  BOTON SECCION 4   -->
+                        <div id="correcto4" class="col s12 m6 offset-m3 hide">
+                            <input class="with-gap" type="checkbox" id="check4" />
+                            <label for="check4">Los datos son correctos</label>
+                        </div>
+                        <button id="correcto4s" class="waves-effect waves-light btn blue darken-3 hide" type="submit"><i class="material-icons right">arrow_forward</i> Siguiente </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="referencias" class="hide">
+            <!-- Pari URL -->
+            <h3 class="amber-text text-darken-2">Nombre del producto</h3>
+            <h5>Ahora es momento de elegir el nombre de tu aplicación, también podrás darnos algunos ejemplos de sitios o aplicaciones similares a lo que requieres.</h5>
+            <div class="row">
+                <div class="col s6">
+                    <h5 class="amber-text text-darken-4">Nombre de la aplicación</h5>
+                </div>
+                <div class="col s6">
+                    <h5 class="amber-text text-darken-4">URL's de referencia</h5>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col s6">
+                        <div class="input-field">
+                            <input id="nombreApp" type="text" class="validate user">
+                            <label for="nombreApp">Nombre</label>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="input-field">
+                            <input id="url1" type="text">
+                            <label for="url1">URL</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="url2" type="text">
+                            <label for="url2">URL</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="url3" type="text">
+                            <label for="url3">URL</label>
+                        </div>
+                    </div>
+                </div>
+                <!--  BOTON SECCION 5   -->
+                <div id="correcto5" class="col s12 m6 offset-m3 hide">
+                    <input class="with-gap" type="checkbox" id="check5" />
+                    <label for="check5">Los datos son correctos</label>
+                </div>
+                <button id="correcto5s" class="waves-effect waves-light btn blue darken-3 hide" type="submit"><i class="material-icons right">send</i> enviar </button>
+            </form>
+            <!-- Pari URL -->
+        </section>
+    </main>
+
+    <script src="../static/jquery/dist/jquery.min.js"></script>
+    <script src="../static/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="../assets/js/landing.js"></script>
+</body>
+
+</html>
