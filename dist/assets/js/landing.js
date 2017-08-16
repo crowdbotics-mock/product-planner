@@ -14,7 +14,7 @@ const cargarPagina = function(){
     $('.collapsible').collapsible();
     $('.modal').modal();
     $("#categoria").change(confirmacion);
-    $("#ue1").change(confirmacion2);
+    $("#ue1").mouseup(confirmacion2);
     $("#check1").click(seccion2);
     $("#check2").click(seccion3);
     $("#seccion1").submit(siguiente1_2);
@@ -57,6 +57,13 @@ const siguiente2_3 = function(e){
 	console.log("enter");
 	$("#user-persona").addClass("hide");
 	$("#acciones").removeClass("hide");
+};
+
+const siguiente3_4 = function(e){
+	e.preventDefault();
+	console.log("enter");
+	$("#acciones").addClass("hide");
+	$("#objetos").removeClass("hide");
 };
  //Section1: Tipo de Prooducto
 

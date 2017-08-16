@@ -14,7 +14,7 @@ const cargarPagina = function(){
     $('.collapsible').collapsible();
     $('.modal').modal();
     $("#categoria").change(confirmacion);
-    $("#ue1").change(confirmacion2);
+    $("#ue1").mouseup(confirmacion2);
     $("#check1").click(seccion2);
     $("#check2").click(seccion3);
     $("#seccion1").submit(siguiente1_2);
@@ -23,6 +23,11 @@ const cargarPagina = function(){
 
     
  };
+
+
+const Proyectos = {
+	proyectos:[]	
+};
 
 
 const confirmacion = function(){
@@ -45,9 +50,18 @@ const seccion3 = function(){
 	$("#correcto2s").removeClass("hide");
 };
 
+const tipo_producto = function()
+
+
 const siguiente1_2 = function(e){
 	e.preventDefault();
-	console.log("enter");
+	localStorage.descripcion = $("#textarea1").val();
+	localStorage.tipos = document.getElementByClassName('tipo').map(function (tipo){
+		if(tipo.checked){
+			return tipo;
+		}
+	});
+	console.log("localStorage.tipos");
 	$("#inicio").addClass("hide");
 	$("#user-persona").removeClass("hide");
 };
@@ -57,6 +71,13 @@ const siguiente2_3 = function(e){
 	console.log("enter");
 	$("#user-persona").addClass("hide");
 	$("#acciones").removeClass("hide");
+};
+
+const siguiente3_4 = function(e){
+	e.preventDefault();
+	console.log("enter");
+	$("#acciones").addClass("hide");
+	$("#objetos").removeClass("hide");
 };
  //Section1: Tipo de Prooducto
 
