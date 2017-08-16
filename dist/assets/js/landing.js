@@ -116,7 +116,6 @@ const masUsuario = function () {
     }       
 }
 const userArray = function (){
-
         $(".user").filter(function(){
             if($(".user").val() != null){
                this.forEach(console.log($(".user").val())) 
