@@ -41,6 +41,14 @@ body #seccion1 #categoria .tarjeta .card-image .btn-floating.halfway-fab {
   right: -10px;
 }
 
+body #seccion1 #categoria .tarjeta .card .card-content.otro {
+  padding: 0 24px;
+}
+
+body #seccion1 #categoria .tarjeta .row.otro {
+  margin-bottom: 0;
+}
+
 body .tarjeta-ej {
   padding-bottom: 6rem;
 }
