@@ -57,7 +57,7 @@ const tipo_producto = function(){}
 const siguiente1_2 = function(e){
 	e.preventDefault();
 	localStorage.descripcion = $("#textarea1").val();
-	localStorage.tipos = document.getElementByClassName('tipo').map(function (tipo){
+	localStorage.tipos = $(".tipo").map(function (tipo){
 		if(tipo.checked){
 			return tipo;
 		}
