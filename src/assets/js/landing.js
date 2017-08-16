@@ -82,6 +82,7 @@ const siguiente2_3 = function(e){
 	$("#user-persona").addClass("hide");
 	scrollTo(0,0);
 	$("#acciones").removeClass("hide");
+    userArray();
 };
 
 const siguiente3_4 = function(e){
@@ -92,18 +93,17 @@ const siguiente3_4 = function(e){
 	$("#objetos").removeClass("hide");
 };
  
-//Section1: Tipo de Prooducto
 const masUsuario = function () {
     let contadorUsuario = contador;
     const plantillaUsuario = `<div class="row">
                             <div class="input-field col s6">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input id="un-__contador__" type="text" class="validate">
+                                <input id="un-__contador__" type="text" class="validate user">
                                 <label for="un-__contador__">Nombre de usuario (rol):</label>
                             </div>
                             <div class="input-field col s6">
                                 <i class="material-icons prefix">details</i>
-                                <input id="ue__contador__" class="">
+                                <input id="ue__contador__" type="text" class="">
                                 <label for="ue__contador__">Especificaciones(edad, sexo):</label>
                             </div>
                         </div>`;
@@ -113,9 +113,13 @@ const masUsuario = function () {
             .replace('__contador__', i)
             .replace('__contador__', i);
         $("#userPersona").append(nuevaPlantilla); 
-    }
-       
+    }       
 }
-
-
+const userArray = function (){
+    if ($(".user").val()!= null){
+        $(".user").map(function(usurio, i){
+            console.log(usurio)
+        })
+    }
+}
 $(document).ready(cargarPagina);
