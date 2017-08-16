@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projectbotics</title>
+    <title>Product Planner</title>
     <link rel="stylesheet" href="../static/materialize-css/dist/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
@@ -12,118 +12,174 @@
 </head>
 
 <body>
-
-    <main>
+    <header class="navbar-fixed">
+        <nav class="nav-wrapper amber darken-2">
+            <a class="brand-logo left">Crowdbotics</a>
+            <a class="right">PRODUCT PLANNER</a>
+        </nav>
+    </header>
+    <main class="container">
         <section id="inicio">
             <!--Dian-->
             <div class="row">
-                <form id="seccion1" class="col s12">
+                <form id="seccion1">
                     <div class="row">
-                        <div class="descripcion">
-                            <h3>Danos una descripción de tu producto</h3>
-                            <div class="input-field col s12">
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                <label for="textarea1">Textarea</label>
+                        <div class="col s12 m4">
+                            <div class="descripcion">
+                                <h4>Danos una descripción de tu producto</h4>
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Textarea</label>
+                                </div>
+                            </div>
+                            <div id="tecnologias">
+                                <h4>Que tipo de producto necesitas</h4>
+                                <div class="row">
+                                    <div class="col s6 m4 center">
+                                        <img class="responsive-img"  src="../assets/img/apple.svg" alt="ios">
+                                        <p>
+                                            <input class="tipo" name="group1" type="checkbox" id="ios" />
+                                            <label for="ios">IOS</label>
+                                        </p>
+                                    </div>
+                                    <div class="col s6 m4">
+                                        <img class="responsive-img"  src="../assets/img/android.svg" alt="android">
+                                        <p>
+                                            <input class="tipo" name="group1" type="checkbox" id="android" />
+                                            <label for="android">Android</label>
+                                        </p>
+                                    </div>
+                                    <div class="col s6 m4">
+                                        <img class="responsive-img"  src="../assets/img/web.svg" alt="web">
+                                        <p>
+                                            <input class="tipo" name="group1" type="checkbox" id="web" />
+                                            <label for="web">Web</label>
+                                        </p>
+                                    </div>
+                                    <div class="col s6 m4">
+                                        <img class="responsive-img"  src="../assets/img/vr.svg" alt="VR">
+                                        <p>
+                                            <input class="tipo" name="group1" type="checkbox" id="vr" />
+                                            <label for="vr">VR</label>
+                                        </p>
+                                    </div>
+                                    <div class="col s6 m4">
+                                        <img class="responsive-img"  src="../assets/img/ai.svg" alt="AI">
+                                        <p>
+                                            <input class="tipo" name="group1" type="checkbox" id="ai" />
+                                            <label for="ai">AI</label>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m8">
+                            <div id="categoria">
+                                <h4>¿Tu producto entra dentro de alguna de estas categorias?</h4>
+                                <p>Puedes seleccionar varias</p>
+
+                                <div class="row">
+
+                                    <div class="card col s12 m6">
+                                        <div class="card-image">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">help_outline</i></a>
+                                            <img class="responsive-img"  src="../assets/img/01-blog-01.svg">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="row valign-wrapper">
+                                                <div class="col s6">
+                                                    <span class="card-title">Blog</span>
+                                                </div>
+                                                <div class="col s6">
+                                                    <p class="right-align">
+                                                        <input data-name="blog" class="with-gap" name="group2" type="checkbox" id="blog" />
+                                                        <label for="blog"></label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card  col s12 m6">
+                                        <div class="card-image">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">help_outline</i></a>
+                                            <img class="responsive-img"  src="../assets/img/02-social-01.svg">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="row valign-wrapper">
+                                                <div class="col s6">
+                                                    <span class="card-title">Social</span>
+                                                </div>
+                                                <div class="col s6">
+                                                    <p class="right-align">
+                                                        <input data-name="social" class="with-gap" name="group2" type="checkbox" id="social" />
+                                                        <label for="social"></label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <input class="with-gap" name="group2" type="checkbox" id="marketplace" />
+                                    <label for="marketplace">Marketplace</label>
+                                    <a href=""><i class="tiny material-icons">help outline</i></a>
+                                </div>
+                                <div>
+                                    <input class="with-gap" name="group2" type="checkbox" id="juego" />
+                                    <label for="juego">Juego</label>
+                                    <a href=""><i class="tiny material-icons">help outline</i></a>
+                                </div>
+                                <div>
+                                    <input class="with-gap" name="group2" type="checkbox" id="productividad" />
+                                    <label for="productividad">Productividad</label>
+                                    <a href=""><i class="tiny material-icons">help outline</i></a>
+                                </div>
+                                <div>
+                                    <input class="with-gap" name="group2" type="checkbox" id="blog" />
+                                    <label for="blog">Blog</label>
+                                    <a href=""><i class="tiny material-icons">help outline</i></a>
+                                </div>
+                                <div>
+                                    <input class="with-gap" name="group2" type="checkbox" id="foro" />
+                                    <label for="foro">Foro</label>
+                                    <a href=""><i class="tiny material-icons">help outline</i></a>
+                                </div>
+                                <div>
+                                    <input class="with-gap" name="group2" type="checkbox" id="educacion" />
+                                    <label for="educacion">Educación</label>
+                                    <a href=""><i class="tiny material-icons">help outline</i></a>
+                                </div>
+                                <div>
+                                    <input class="with-gap" name="group2" type="checkbox" id="otro" />
+                                    <label for="otro">Otro</label>
+                                    <input type="text">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="tecnologias">
-                       <h3>Que tipo de producto necesitas</h3>
-                        <p>
-                            <input class="with-gap" name="group1" type="radio" id="ios" />
-                            <label for="ios">IOS</label>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group1" type="radio" id="android" />
-                            <label for="android">Android</label>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group1" type="radio" id="web" />
-                            <label for="web">Web</label>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group1" type="radio" id="vr" />
-                            <label for="vr">VR</label>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group1" type="radio" id="ai" />
-                            <label for="ai">AI</label>
-                        </p>
-                    </div>
-                    <div id="categoria">
-                       <h3>Tu producto entra dentro de alguna de estas categorias</h3>
-                       <p>Puedes seleccionar varias</p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="creacion" />
-                            <label for="creacion">Creación</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="social" />
-                            <label for="social">Social</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="marketplace" />
-                            <label for="marketplace">Marketplace</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="juego" />
-                            <label for="juego">Juego</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="utilitario" />
-                            <label for="utilitario">Utilitario</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="productividad" />
-                            <label for="productividad">Productividad</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="blog" />
-                            <label for="blog">Blog</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="foro" />
-                            <label for="foro">Foro</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="educacion" />
-                            <label for="educacion">Educación</label>
-                            <a href=""><i class="tiny material-icons">help outline</i></a>
-                        </p>
-                        <p>
-                            <input class="with-gap" name="group2" type="checkbox" id="otro" />
-                            <label for="otro">Otro</label>
-                            <input type="text">
-                        </p>
-                    </div>
+
+
                     <div id="correcto1" class="hide">
                         <input class="with-gap" name="group2" type="checkbox" id="check1" />
                         <label for="check1">Los datos son correctos</label>
-                    </div>                    
+                    </div>
                     <button id="correcto1s" class="hide" type="submit">Siguiente</button>
                 </form>
             </div>
         </section>
         <section id="user-persona" class="hide">
-        <!--Pari-->
-            <div class="container">
+            <!--Pari-->
+            <div>
                 <h2>Usuarios</h2>
                 <h6>Ayúdanos a definir quién(es) usará(n) tu producto. Procura ser lo más específico posible.</h6>
                 <div class="row">
                     <h6>Ejemplo:</h6>
-                            <p>Nombre de usuario: <strong> Comprador</strong> <br>
-                                Especificaciones: <strong> Es un adulto (hombre o mujer con una tarjeta de crédito) buscando algo para comprar </strong></p>
+                    <p>Nombre de usuario: <strong> Comprador</strong> <br> Especificaciones: <strong> Es un adulto (hombre o mujer con una tarjeta de crédito) buscando algo para comprar </strong></p>
                     <form id="seccion2" class="col s12">
-                         <div class="row">
-                           <!-- ID range un(#user)= usuario nombre, ue(#user)= usuario espesificaciones/detalles-->
+                        <div class="row">
+                            <!-- ID range un(#user)= usuario nombre, ue(#user)= usuario espesificaciones/detalles-->
                             <div class="input-field col s6">
                                 <i class="material-icons prefix">account_circle</i>
                                 <input id="un-1" type="text" class="validate">
@@ -135,42 +191,42 @@
                                 <label for="ue1">Especificaciones(edad, sexo):</label>
                             </div>
                             <div class="row">
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">account_circle</i>
-                                <input id="un2" type="text" class="validate">
-                                <label for="un2">Nombre de usuario (rol):</label>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="un2" type="text" class="validate">
+                                    <label for="un2">Nombre de usuario (rol):</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">details</i>
+                                    <input id="ue2" class="">
+                                    <label for="ue2">Especificaciones(edad, sexo):</label>
+                                </div>
                             </div>
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">details</i>
-                                <input id="ue2" class="">
-                                <label for="ue2">Especificaciones(edad, sexo):</label>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="un3" type="text" class="validate">
+                                    <label for="un3">Nombre de usuario (rol):</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">details</i>
+                                    <input id="ue3" class="">
+                                    <label for="u3">Especificaciones(edad, sexo):</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">account_circle</i>
-                                <input id="un3" type="text" class="validate">
-                                <label for="un3">Nombre de usuario (rol):</label>
+                            <div class="row">
+                                <button class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
                             </div>
-                            <div class="input-field col s6">
-                                <i class="material-icons prefix">details</i>
-                                <input id="ue3" class="">
-                                <label for="u3">Especificaciones(edad, sexo):</label>
+                            <div id="correcto2" class="hide">
+                                <input class="with-gap" name="group2" type="checkbox" id="check2" />
+                                <label for="check2">Los datos son correctos</label>
                             </div>
-                        </div>
-                      <div class="row">
-                            <button class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
-                      </div>
-                      <div id="correcto2" class="hide">
-                        <input class="with-gap" name="group2" type="checkbox" id="check2" />
-                        <label for="check2">Los datos son correctos</label>
-                      </div>                      
-                      <button id="correcto2s" class="hide" type="submit">Siguiente</button>
+                            <button id="correcto2s" class="hide" type="submit">Siguiente</button>
                     </form>
-                </div>
+                    </div>
 
-            </div>
-        <!-- fin Pari -->
+                </div>
+                <!-- fin Pari -->
         </section>
         <section id="acciones" class="hide">
             <!--Gaby & Rena-->
@@ -180,7 +236,7 @@
                 <div class="user-action"> //Pantilla de usuarios
                     <h4>Acciones Básicas sugeridas</h4>
                     <div>
-                       <p>básicos</p>
+                        <p>básicos</p>
                     </div>
                     <div>
                         <h4>Agrega aquí más acciones</h4>
@@ -191,15 +247,15 @@
                         <input type="" name="">
 
                         <button>Agregar más</button>
-                    </div> 
+                    </div>
                 </div>
                 <div id="correcto3" class="hide">
                     <input class="with-gap" name="group2" type="checkbox" id="check3" />
                     <label for="check3">Los datos son correctos</label>
-                </div>             
+                </div>
                 <button id="correcto3s" class="hide" type="submit">Siguiente</button>
             </form>
-                       
+
             <hr>
         </section>
         <section id="objetos">

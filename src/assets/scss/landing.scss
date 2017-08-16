@@ -1,6 +1,7 @@
 body {
     font-family: 'Raleway', sans-serif;
-    nav {
+    nav,
+    {
         padding: 0 1rem;
         .brand-logo {
             font-family: 'Merriweather', serif;
@@ -9,8 +10,17 @@ body {
     h4.tasks {
         margin-left: 2vw;
     }
+    #seccion1,
+    #seccion2,
+    #seccion3 {
+        min-height: 100vh;
+    }
+    .card-image{
+        padding: 1rem;
+        .btn-floating.halfway-fab{
+            top: -10px;
+            right: -10px;
+        }
+    }
 }
 
-.margin {
-    margin-bottom: -7px;
-}
