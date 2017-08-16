@@ -116,10 +116,13 @@ const masUsuario = function () {
     }       
 }
 const userArray = function (){
-    if ($(".user").val()!= null){
-        $(".user").map(function(usuario, i){
-            console.log(usuario)
+
+        $(".user").filter(function(){
+            if($(".user").val() != null){
+               this.forEach(console.log($(".user").val())) 
+            } 
+
         })
     }
-}
+
 $(document).ready(cargarPagina);
