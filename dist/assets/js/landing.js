@@ -91,12 +91,12 @@ const siguiente3_4 = function(e){
  
 //Section1: Tipo de Prooducto
 const masUsuario = function () {
-    //let contadorUsuario = contador;
+    let contadorUsuario = contador;
     const plantillaUsuario = `<div class="row">
                             <div class="input-field col s6">
                                 <i class="material-icons prefix">account_circle</i>
-                                <input id="un__contador__" type="text" class="validate">
-                                <label for="un__contador__">Nombre de usuario (rol):</label>
+                                <input id="un-__contador__" type="text" class="validate">
+                                <label for="un-__contador__">Nombre de usuario (rol):</label>
                             </div>
                             <div class="input-field col s6">
                                 <i class="material-icons prefix">details</i>
@@ -104,14 +104,14 @@ const masUsuario = function () {
                                 <label for="ue__contador__">Especificaciones(edad, sexo):</label>
                             </div>
                         </div>`;
-    for (let i = 4; i < 7; i++) {
+    for (let i = contadorUsuario; i < (contadorUsuario+3); i++) {
         let nuevaPlantilla = plantillaUsuario.replace('__contador__', i)
             .replace('__contador__', i)
             .replace('__contador__', i)
             .replace('__contador__', i);
-        $("#seccion2").append(nuevaPlantilla);
+        $("#userPersona").append(nuevaPlantilla); 
     }
-        
+       
 }
 
 
