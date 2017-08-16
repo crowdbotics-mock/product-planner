@@ -72,6 +72,7 @@ const siguiente1_2 = function(e){
 		}
 	});
 	$("#inicio").addClass("hide");
+	scrollTo(0,0);
 	$("#user-persona").removeClass("hide");
 };
 
@@ -79,6 +80,7 @@ const siguiente2_3 = function(e){
 	e.preventDefault();
 	console.log("enter");
 	$("#user-persona").addClass("hide");
+	scrollTo(0,0);
 	$("#acciones").removeClass("hide");
     userArray();
 };
@@ -87,6 +89,7 @@ const siguiente3_4 = function(e){
 	e.preventDefault();
 	console.log("enter");
 	$("#acciones").addClass("hide");
+	scrollTo(0,0);
 	$("#objetos").removeClass("hide");
 };
  
@@ -117,6 +120,7 @@ const userArray = function (){
             if($(".user").val() != null){
                this.forEach(console.log($(".user").val())) 
             } 
+
         })
     }
 

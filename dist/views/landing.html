@@ -271,52 +271,59 @@
         </section>
         <section id="user-persona" class="hide">
             <!--Pari-->
-            <div>
-                <h2>Usuarios</h2>
+
+            <div class="container">
+                <h4>Usuarios</h4>
                 <h6>Ayúdanos a definir quién(es) usará(n) tu producto. Procura ser lo más específico posible.</h6>
+                <!-- Tarjeta ejemplo -->
                 <div class="row">
-                    <h6>Ejemplo:</h6>
-                    <p>Nombre de usuario: <strong> Comprador</strong> <br> Especificaciones: <strong> Es un adulto (hombre o mujer con una tarjeta de crédito) buscando algo para comprar </strong></p>
-                    <div class="fixed-action-btn">
-                        <button id="nuevoUsuario" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
+                  <div class="col s12 m12">
+                    <div class="card-panel blue lighten-5 tarjeta-ej">
+                      <h5>Ejemplo:</h5>
+                          <span class="col s6"> <i class="material-icons prefix">account_circle</i> <strong>Usuario:</strong> Estudiante </span>
+                          <span class="col s6"> <i class="material-icons prefix">list</i><strong>Descripción: </strong>Niño(a) de tercer grado</span>
                     </div>
+                  </div>
+                </div>
                     <form id="seccion2" class="col s12">
                         <div id="userPersona">
                             <div class="row">
                                 <!-- ID range un(#user)= usuario nombre, ue(#user)= usuario espesificaciones/detalles-->
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">account_circle</i>
-                                    <input id="un-1" type="text" class="validate user">
-                                    <label for="un-1"> Nombre de usuario (rol):</label>
+
+                                    <input id="un-1" type="text" class="validate">
+                                    <label for="un-1">Usuario (rol):</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">details</i>
+                                    <i class="material-icons prefix">list</i>
                                     <input id="ue1" type="text" class="">
-                                    <label for="ue1">Especificaciones(edad, sexo):</label>
+                                    <label for="ue1">Descripción(edad, sexo):</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">account_circle</i>
-                                    <input id="un-2" type="text" class="validate user">
-                                    <label for="un-2"> Nombre de usuario (rol):</label>
+                                    <input id="un-2" type="text" class="validate">
+                                    <label for="un-2">Usuario (rol):</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">details</i>
+                                    <i class="material-icons prefix">list</i>
                                     <input id="ue2" type="text" class="">
-                                    <label for="ue2">Especificaciones(edad, sexo):</label>
+                                    <label for="ue2">Descripción(edad, sexo):</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">account_circle</i>
-                                    <input id="un-3" type="text" class="validate user">
-                                    <label for="un-3"> Nombre de usuario (rol):</label>
+
+                                    <input id="un-3" type="text" class="validate">
+                                    <label for="un-3">Usuario (rol):</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <i class="material-icons prefix">details</i>
+                                    <i class="material-icons prefix">list</i>
                                     <input id="ue3" type="text" class="">
-                                    <label for="ue3">Especificaciones(edad, sexo):</label>
+                                    <label for="ue3">Descripción(edad, sexo):</label>
                                 </div>
                             </div>
                         </div>
@@ -324,39 +331,51 @@
                             <input class="with-gap" name="group2" type="checkbox" id="check2" />
                             <label for="check2">Los datos son correctos</label>
                         </div>
-                        <button id="correcto2s" class="hide" type="submit">Siguiente</button>
+                        <div class="row">
+                            <button id="nuevoUsuario" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
+                        </div>
+                        <div class="row">
+                            <button id="correcto2s" class="hide" type="submit">Siguiente</button>
+                        </div>
                     </form>
-                </div>
             </div>
             <!-- fin Pari -->
         </section>
         <section id="acciones" class="hide">
             <!--Gaby & Rena-->
-            <hr>
-            <h2 class="center-align">Acciones</h2>
-            <form id="seccion3">
-                <div class="user-action"> //Pantilla de usuarios
-                    <h4>Acciones Básicas sugeridas</h4>
-                    <div>
-                        <p>básicos</p>
+            <div class="row">
+                <h2 class="center-align">Acciones</h2>
+                <p>//Agregar descripción//</p>
+                <form id="seccion3">
+                    <div class="usuarios col m4">
+                        <p>Usuario1</p>
                     </div>
-                    <div>
-                        <h4>Agrega aquí más acciones</h4>
-                        <input type="" name="">
-                        <input type="" name="">
-                        <input type="" name="">
-                        <input type="" name="">
-                        <input type="" name="">
-
-                        <button>Agregar más</button>
+                    <div class="user-action col m4"> 
+                        <h5>Acciones sugeridas</h5>
+                        <div>
+                            <p>básicos</p>
+                        </div>
                     </div>
-                </div>
-                <div id="correcto3" class="hide">
-                    <input class="with-gap" name="group2" type="checkbox" id="check3" />
-                    <label for="check3">Los datos son correctos</label>
-                </div>
-                <button id="correcto3s" class="hide" type="submit">Siguiente</button>
-            </form>
+                    <div class="col m4">                         
+                        <div>
+                            <h5>Acciones particulares</h5>
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            
+                            <div class="row">
+                                <button id="nueva-accion1" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="correcto3" class="hide">
+                        <input class="with-gap" name="group2" type="checkbox" id="check3" />
+                        <label for="check3">Los datos son correctos</label>
+                    </div>
+                    <button id="correcto3s" class="hide" type="submit">Siguiente</button>
+                </form>
+            </div>
+            
 
             <hr>
         </section>
