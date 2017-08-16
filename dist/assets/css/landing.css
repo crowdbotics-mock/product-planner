@@ -40,3 +40,7 @@ body #seccion1 #categoria .tarjeta .card-image .btn-floating.halfway-fab {
   top: -10px;
   right: -10px;
 }
+
+body .tarjeta-ej {
+  padding-bottom: 6rem;
+}
