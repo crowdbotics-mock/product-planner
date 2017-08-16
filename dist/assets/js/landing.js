@@ -17,28 +17,25 @@ const cargarPagina = function () {
     $("#categoria").change(confirmacion);
     $("#ue1").mouseup(confirmacion2);
     $("#check1").click(seccion2);
-<<<<<<< HEAD
     $("#check2").click(seccion3);
     $("#seccion1").submit(siguiente1_2);
     $("#seccion2").submit(siguiente2_3);
     $("#seccion3").submit(siguiente3_4);
-=======
-    $("#seccion1").submit(siguiente);
-    $("#seccion2").submit(siguiente);
-    $("#seccion3").submit(siguiente);
     $("#nuevoUsuario").click(masUsuario);
 
->>>>>>> crowd/master
-
 };
 
 
-const confirmacion = function () {
-    console.log("cambió");
-    $("#correcto1").removeClass("hide");
+const Proyectos = {
+	proyectos:[]	
 };
 
-<<<<<<< HEAD
+
+const confirmacion = function(){
+	console.log("cambió");
+	$("#correcto1").removeClass("hide");
+};
+
 const confirmacion2 = function(){
 	console.log("cambió");
 	$("#correcto2").removeClass("hide");
@@ -54,9 +51,18 @@ const seccion3 = function(){
 	$("#correcto2s").removeClass("hide");
 };
 
+const tipo_producto = function(){}
+
+
 const siguiente1_2 = function(e){
 	e.preventDefault();
-	console.log("enter");
+	localStorage.descripcion = $("#textarea1").val();
+	localStorage.tipos = document.getElementByClassName('tipo').map(function (tipo){
+		if(tipo.checked){
+			return tipo;
+		}
+	});
+	console.log("localStorage.tipos");
 	$("#inicio").addClass("hide");
 	$("#user-persona").removeClass("hide");
 };
@@ -74,19 +80,7 @@ const siguiente3_4 = function(e){
 	$("#acciones").addClass("hide");
 	$("#objetos").removeClass("hide");
 };
- //Section1: Tipo de Prooducto
-=======
-const seccion2 = function () {
-    console.log("sig de 1 a 2");
-    $("#correcto1s").removeClass("hide");
-};
-
-const siguiente = function (e) {
-    e.preventDefault();
-    console.log("enter");
-    $("#inicio").addClass("hide");
-    $("#user-persona").removeClass("hide");
-};
+ 
 //Section1: Tipo de Prooducto
 const masUsuario = function () {
     //let contadorUsuario = contador;
@@ -111,6 +105,6 @@ const masUsuario = function () {
     }
         
 }
->>>>>>> crowd/master
+
 
 $(document).ready(cargarPagina);
