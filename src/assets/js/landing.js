@@ -51,7 +51,7 @@ const seccion3 = function(){
 	$("#correcto2s").removeClass("hide");
 };
 
-const tipo_producto = function()
+const tipo_producto = function(){}
 
 
 const siguiente1_2 = function(e){
@@ -80,24 +80,7 @@ const siguiente3_4 = function(e){
 	$("#acciones").addClass("hide");
 	$("#objetos").removeClass("hide");
 };
- //Section1: Tipo de Prooducto
-
-const confirmacion = function () {
-    console.log("cambió");
-    $("#correcto1").removeClass("hide");
-};
-
-const seccion2 = function () {
-    console.log("sig de 1 a 2");
-    $("#correcto1s").removeClass("hide");
-};
-
-const siguiente = function (e) {
-    e.preventDefault();
-    console.log("enter");
-    $("#inicio").addClass("hide");
-    $("#user-persona").removeClass("hide");
-};
+ 
 //Section1: Tipo de Prooducto
 const masUsuario = function () {
     //let contadorUsuario = contador;
