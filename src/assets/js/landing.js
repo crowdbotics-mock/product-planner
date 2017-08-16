@@ -11,6 +11,7 @@ firebase.initializeApp(config);
 
 const contador = 4;
 let tipos = [];
+let categorias = [];
 
 const cargarPagina = function () {
     $('.collapsible').collapsible();
@@ -62,6 +63,12 @@ const siguiente1_2 = function(e){
 		if(tipo.checked){
 			console.log(tipo.id);
 			return tipo.id;
+		}
+	});
+	categorias = $(".categorias").map(function(indice, categoria){
+		if(categoria.checked){
+			console.log(categoria.id);
+			return categoria.id;
 		}
 	});
 	$("#inicio").addClass("hide");
